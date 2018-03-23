@@ -1,27 +1,54 @@
-﻿<!DOCTYPE html>
-<html>
-	<head>
-        <meta charset="utf-8" name="viewport" content="width = device-width, initial-scale = 1.0" />
-        <!-- © Copyright 2018 - Elton Memishaj -->
-		<title>Material Animations</title>
-		<!-- Import Material Icons Font -->
-		<link rel="stylesheet" href="css/material-icons.css" />
-		<!-- Material Design CSS -->
-		<link rel="stylesheet" href="css/materialize.css" />
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/custom.css" />
-		<!-- Import jQuery before materialize.js -->
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-		<!-- Material Design Javascript -->
-		<script type="text/javascript" src="js/materialize.js"></script>
-        <!-- Custom Javascript -->
-        <script type="text/javascript" src="js/custom.js"></script>
-	</head>
-	<body>
-        <div id="main-wrapper" style="position: relative; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%;">
-            <div class="card-panel" style="margin: 0; height: 25%;">
+﻿<head>
+    <meta charset="utf-8" name="viewport" content="width = device-width, initial-scale = 1.0">
+    <!-- © Copyright 2018 - Elton Memishaj -->
+    <title>Material Animations</title>
+    <!-- Import Material Icons Font -->
+    <link rel="stylesheet" href="css/material-icons.css">
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="css/materialize.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Import jQuery before materialize.js -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Material Design Javascript -->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+    <div id="main-wrapper" style="position: relative; bottom: 0px; right: 0px; width: 100%; height: 100%;">
+        <!-- Title / Action Bar -->
+        <div class="title-bar" style="position: absolute; top: 0; width: 100%; height: 64px;">
+            <div class="material-grey-text center" style="line-height: 64px; font-size: 2.5em; padding-top: 4px;">Material Animations</div>
+            <a style="position: absolute; top: 50%; left: 24px; transform: translateY(-50%);"><i id="hamburger" onclick="if(this.innerHTML == 'menu') openSideNav(); else closeSideNav();" class="material-icons material-grey-text" style="cursor: pointer; transition: all .3s ease;">menu</i></a>
+        </div>
+        <div id="main-no-title-bar" style="position: absolute; top: 64px; left: 0; bottom: 0; right: 0; background-image: url(images/background.png); background-size: cover; background-position: bottom;">            
+            <!-- Side Nav -->
+            <div id="side-nav" style="position: absolute; background-color: white; width: 20%; height: 100%; transition: transform .3s ease; transform: translateX(-100%);">
+                <div id="user-view" style="position: absolute; width: 100%; height: 25%; background-color: #96aeda;">
+                    <div class="absolute-center">
+                        <i class="material-icons large white-text center" style="width: 100%;">account_circle</i>
+                        <div class="center"><a class="white-text">Username</a></div>
+                    </div>
+                </div>
             </div>
-            <a style="position: absolute; bottom: 4rem; right: 4rem;" class="waves-effect waves-light btn-floating btn-large hoverable md-whiteframe-6dp red"><i class="material-icons">edit</i></a>
-        </div>            
-	</body>
-</html>
+            <div id="main-no-side-nav" onclick="if(event.clientX &gt; $('#side-nav').width()) closeSideNav();" style="position: absolute; top: 0; left: 0; bottom: 0; right: 0;">
+                <!-- FAB -->
+                <div class="fixed-action-btn click-to-toggle" style="margin-bottom: 2rem; margin-right: 2rem;">
+                    <a id="fab" onclick="fabOnClick(this, '#5e97f6', '#ff5722');" style="background-color: #5e97f6;" class="waves-effect waves-light btn-floating btn-large hoverable md-whiteframe-6dp">
+                        <i class="material-icons" style="transition: all .3s ease;">create</i>
+                    </a>
+                    <ul>
+                        <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white tooltipped" data-position="left" data-tooltip="Graph"><i class="material-icons black-text">insert_chart</i></a></li>
+                        <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white"><i class="material-icons black-text">format_quote</i></a></li>
+                        <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white"><i class="material-icons black-text">publish</i></a></li>
+                        <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white"><i class="material-icons black-text">attach_file</i></a></li>
+                    </ul>
+                </div>
+                <div class="absolute-center">
+                    <i class="material-icons" style="font-size: 24rem; padding-bottom: 275px; color: #96aeda; cursor: pointer;">cloud</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
