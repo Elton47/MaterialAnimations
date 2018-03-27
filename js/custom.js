@@ -24,3 +24,7 @@ function closeSideNav() {
     hamburger.style.transform = 'rotateZ(0deg)';
     document.getElementById('side-nav').style.transform = 'translateX(-100%)';
 }
+function openFrame(src) {
+    document.getElementById('iframe').src = !document.getElementById('iframe').src.includes(src) ? src : 'tabs/main.html';
+    closeSideNav();
+}

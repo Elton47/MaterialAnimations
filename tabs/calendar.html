@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width = device-width, initial-scale = 1.0">
+    <!-- © Copyright 2018 - Elton Memishaj -->
+    <title>Calendar</title>
+    <!-- Import Material Icons Font -->
+    <link rel="stylesheet" href="../css/material-icons.css">
+    <!-- Material Design CSS -->
+    <link rel="stylesheet" href="../css/materialize.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- jQuery-UI CSS -->
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <!-- jQuery-UI JS -->
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- Material Design Javascript -->
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <!-- Custom Javascript -->
+    <script type="text/javascript" src="../js/custom.js"></script>
+</head>
+<body>
+    <div id="main-wrapper" style="background-color: white; width: 100%; height: 100%;">
+        <!-- FAB -->
+        <div class="fixed-action-btn click-to-toggle" style="position: fixed; margin-bottom: 2rem; margin-right: 2rem;">
+            <a id="fab" onclick="fabOnClick(this, '#5e97f6', '#ff5722');" style="background-color: #5e97f6;" class="waves-effect waves-light btn-floating btn-large hoverable md-whiteframe-6dp">
+                <i class="material-icons" style="transition: all .3s ease;">create</i>
+            </a>
+            <ul>
+                <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white tooltipped" data-delay="0" data-position="left" data-tooltip="Graph"><i class="material-icons black-text">insert_chart</i></a></li>
+                <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white"><i class="material-icons black-text">format_quote</i></a></li>
+                <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white"><i class="material-icons black-text">publish</i></a></li>
+                <li><a class="btn-floating waves-effect waves-ripple hoverable md-whiteframe-6dp white"><i class="material-icons black-text">attach_file</i></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
